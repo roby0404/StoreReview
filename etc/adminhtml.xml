@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <report>
+            <children>
+                <review>
+                    <children>
+                        <inchoo_storereview translate="title" module="inchoo_storereview">
+                            <title>Store Reviews</title>
+                            <action>adminhtml/inchoo_review/index</action>
+                            <sort_order>10</sort_order>
+                        </inchoo_storereview>
+                    </children>
+                </review>
+            </children>
+        </report>
+    </menu>
+</config>

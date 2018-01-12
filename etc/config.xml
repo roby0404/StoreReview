@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Inchoo_StoreReview>
+            <version>1.0.0.0</version>
+        </Inchoo_StoreReview>
+    </modules>
+
+    <frontend>
+        <routers>
+            <inchoo_storereview>
+                <use>standard</use>
+                <args>
+                    <module>Inchoo_StoreReview</module>
+                    <frontName>review</frontName>
+                </args>
+            </inchoo_storereview>
+        </routers>
+
+        <layout>
+            <updates>
+                <inchoo_storereview module="Inchoo_StoreReview">
+                    <file>inchoo_storereview.xml</file>
+                </inchoo_storereview>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <blocks>
+            <inchoo_storereview>
+                <class>Inchoo_StoreReview_Block</class>
+            </inchoo_storereview>
+        </blocks>
+
+        <models>
+            <inchoo_storereview>
+                <class>Inchoo_StoreReview_Model</class>
+                <resourceModel>inchoo_storereview_resource</resourceModel>
+            </inchoo_storereview>
+
+            <inchoo_storereview_resource>
+                <class>Inchoo_StoreReview_Model_Resource</class>
+                <entities>
+                    <review>
+                        <table>inchoo_store_review</table>
+                    </review>
+                </entities>
+            </inchoo_storereview_resource>
+        </models>
+
+        <resources>
+            <inchoo_storereview_setup>
+                <setup>
+                    <module>Inchoo_StoreReview</module>
+                </setup>
+            </inchoo_storereview_setup>
+        </resources>
+
+        <helpers>
+            <inchoo_storereview>
+                <class>Inchoo_StoreReview_Helper</class>
+            </inchoo_storereview>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Inchoo_StoreReview before="Mage_Adminhtml">Inchoo_StoreReview_Adminhtml</Inchoo_StoreReview>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
